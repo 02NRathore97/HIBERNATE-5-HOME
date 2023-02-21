@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/myhiber5</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">root</property>
+		<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+		<property name="hbm2ddl.auto">update</property>
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+
+		<!-- Second level cache -->
+		<!-- <property name="cache.use_second_level_cache">true</property> -->
+		<!-- <property name="cache.region.factory_class">
+			 org.hibernate.cache.ehcache.internal.EhcacheRegionFactory</property> -->
+
+		<!-- <mapping class="com.rays.StudentCertificate"/> -->
+
+		 <mapping class="com.rays.Student"/> 
+		 <mapping class="com.rays.Address"/> 
+
+		<!-- <mapping class="com.one_to_one_map.Question"/> -->
+		<!-- <mapping class="com.one_to_one_map.Answer"/> -->
+
+		<!-- <mapping class="com.one_to_many_map.Question1"/> -->
+		<!-- <mapping class="com.one_to_many_map.Answer1"/> -->
+
+
+		<!-- <mapping class="com.many_to_many_map.Emp"/> -->
+		<!-- <mapping class="com.many_to_many_map.Project"/> -->
+
+		<!-- <mapping resource="com/map_xml/Person.hbm.xml"/>  -->
+
+	</session-factory>
+</hibernate-configuration>
